@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kube-frontend
+  template:
+    metadata:
+      labels:
+        app: kube-frontend
+    spec:
+      containers:
+      - name: kube-frontend
+        image: mudassirq692/kube-frontend-nginx:1.0.0
+        ports:
+        - containerPort: 80
