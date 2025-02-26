@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: kube-frontend
-        image: mudassirq692/kube-frontend-nginx:1.0.0
+        image: mudassirq692/course-frontend:v1
         ports:
         - containerPort: 80
